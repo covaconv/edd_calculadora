@@ -1,6 +1,3 @@
-
-package conarreglos;
-
 /**
  
  * Se define una clase propia para el manejo de excepción en los casos que la 

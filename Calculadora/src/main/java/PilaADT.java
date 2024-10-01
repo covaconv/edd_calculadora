@@ -1,6 +1,4 @@
 
-package conarreglos;
-
 /**
  
  * Se define el comportamiento esperado de una pila a través de una interface.
