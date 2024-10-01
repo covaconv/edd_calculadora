@@ -167,6 +167,11 @@ public class CalcFrame extends javax.swing.JFrame {
         });
 
         igual.setText("=");
+        igual.addActionListener(new java.awt.event.ActionListener(){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                igualActionPerformed(evt);
+            }
+        });
 
         borrarUno.setText("Borrar");
         borrarUno.addActionListener(new java.awt.event.ActionListener() {
@@ -388,6 +393,13 @@ public class CalcFrame extends javax.swing.JFrame {
         display.setText(cad.toString());
     }//GEN-LAST:event_borrarUnoActionPerformed
 
+    private void igualActionPerformed(java.awt.event.ActionEvent evt){
+        Calculadora calcu = new Calculadora(cad.toString());
+        double res;
+
+        res = calcu.calcula();
+
+    }
     /**
      * @param args the command line arguments
      */
