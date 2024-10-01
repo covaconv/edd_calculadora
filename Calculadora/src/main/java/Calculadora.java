@@ -53,7 +53,7 @@ public class Calculadora {
      * Utiliza un objeto tipo PilaE para almacenar los paréntesis izquierdos temporalmente.
      */
     private boolean revisa(){
-        PilaADT<Character> pila = new PilaA();
+        PilaADT<Character> pila = new PilaA<>();
         boolean resp;
         int i, n;
 
@@ -89,7 +89,7 @@ public class Calculadora {
      */        
     private String[] conviertePostfija(String elementos[]){
         String postfija[] = new String[elementos.length];
-        PilaADT <String> pila = new PilaA();
+        PilaADT <String> pila = new PilaA<>();
         int e, p, n;
         
         e = 0;
@@ -155,7 +155,7 @@ public class Calculadora {
      * Regresa un dato tipo double.
      */
     private double evalúa(String postfija[]){
-        PilaADT<Double> pila = new PilaA();
+        PilaADT<Double> pila = new PilaA<>();
         double resul, op1, op2;
         int i;
         
