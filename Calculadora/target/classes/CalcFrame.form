@@ -32,53 +32,61 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="borrarTodo" min="-2" pref="134" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="borrarUno" min="-2" pref="124" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="cuatro" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="cinco" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="seis" min="-2" pref="84" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="siete" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="ocho" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="nueve" min="-2" pref="84" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="parIzq" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="cero" min="-2" pref="84" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="parDer" min="-2" pref="84" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="borrarTodo" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="borrarUno" min="-2" pref="124" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="resta" alignment="1" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="mult" alignment="1" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="div" alignment="1" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="igual" alignment="1" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cuatro" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="cinco" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="seis" min="-2" pref="84" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="siete" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="ocho" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="nueve" min="-2" pref="84" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="parIzq" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="cero" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="parDer" min="-2" pref="84" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="uno" min="-2" pref="84" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="dos" min="-2" pref="84" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="tres" min="-2" pref="84" max="-2" attributes="0"/>
-                              <EmptySpace min="32" max="32767" attributes="0"/>
-                              <Component id="suma" min="-2" pref="98" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="suma" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="resta" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jButton1" max="32767" attributes="0"/>
+                                  <Component id="mult" alignment="0" pref="98" max="32767" attributes="0"/>
+                                  <Component id="div" alignment="0" pref="98" max="32767" attributes="0"/>
+                                  <Component id="igual" alignment="0" pref="98" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -93,48 +101,57 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="uno" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="dos" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="tres" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="suma" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="resta" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="suma" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="mult" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="resta" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="div" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="mult" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="igual" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="borrarUno" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="borrarTodo" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="div" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cuatro" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="cinco" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="seis" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="uno" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="dos" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="tres" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="siete" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="ocho" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="nueve" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="parIzq" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="cero" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="parDer" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="borrarUno" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="borrarTodo" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="igual" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cuatro" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="cinco" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="seis" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="siete" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="ocho" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="nueve" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="parIzq" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="cero" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="parDer" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -302,6 +319,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrarTodoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
