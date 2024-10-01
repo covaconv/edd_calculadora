@@ -5,7 +5,7 @@
  
 /**
  *
- * @author AORIHUELV
+ * 
  */
 public class CalcFrame extends javax.swing.JFrame {
 
