@@ -47,7 +47,7 @@ public class CalcFrame extends javax.swing.JFrame {
         igual = new javax.swing.JButton();
         borrarUno = new javax.swing.JButton();
         borrarTodo = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        potencia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,10 +183,10 @@ public class CalcFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("^");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        potencia.setText("^");
+        potencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                potenciaActionPerformed(evt);
             }
         });
 
@@ -242,7 +242,7 @@ public class CalcFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(potencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(mult, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                                     .addComponent(div, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                                     .addComponent(igual, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))))))
@@ -272,7 +272,7 @@ public class CalcFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(118, 118, 118)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(potencia, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(borrarUno, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -407,9 +407,10 @@ public class CalcFrame extends javax.swing.JFrame {
         display.setText(cad.toString());
     }//GEN-LAST:event_borrarUnoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        cad.append(potencia.getText() + " ");
+    }//GEN-LAST:event_potenciaActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt){
         Calculadora calcu = new Calculadora(cad.toString());
@@ -472,13 +473,13 @@ public class CalcFrame extends javax.swing.JFrame {
     private javax.swing.JButton div;
     private javax.swing.JButton dos;
     private javax.swing.JButton igual;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton mult;
     private javax.swing.JButton nueve;
     private javax.swing.JButton ocho;
     private javax.swing.JButton parDer;
     private javax.swing.JButton parIzq;
+    private javax.swing.JButton potencia;
     private javax.swing.JButton resta;
     private javax.swing.JButton seis;
     private javax.swing.JButton siete;

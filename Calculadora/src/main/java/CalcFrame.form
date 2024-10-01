@@ -82,7 +82,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jButton1" max="32767" attributes="0"/>
+                                  <Component id="potencia" max="32767" attributes="0"/>
                                   <Component id="mult" alignment="0" pref="98" max="32767" attributes="0"/>
                                   <Component id="div" alignment="0" pref="98" max="32767" attributes="0"/>
                                   <Component id="igual" alignment="0" pref="98" max="32767" attributes="0"/>
@@ -121,7 +121,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="potencia" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="borrarUno" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
@@ -321,12 +321,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrarTodoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="potencia">
       <Properties>
         <Property name="text" type="java.lang.String" value="^"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="potenciaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
