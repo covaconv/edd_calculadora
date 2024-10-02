@@ -371,7 +371,7 @@ public class CalcFrame extends javax.swing.JFrame {
 
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
         // TODO add your handling code here:
-        cad.append(mult.getText()+" ");
+        cad.append("*"+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_multActionPerformed
 
