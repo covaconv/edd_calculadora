@@ -168,6 +168,11 @@ public class CalcFrame extends javax.swing.JFrame {
         });
 
         igual.setText("=");
+        igual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                igualActionPerformed(evt);
+            }
+        });
 
         borrarUno.setText("Borrar");
         borrarUno.addActionListener(new java.awt.event.ActionListener() {
@@ -410,6 +415,7 @@ public class CalcFrame extends javax.swing.JFrame {
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
         // TODO add your handling code here:
         cad.append(potencia.getText() + " ");
+        display.setText(cad.toString());
     }//GEN-LAST:event_potenciaActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt){
