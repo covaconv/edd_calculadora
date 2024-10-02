@@ -172,6 +172,15 @@ public class Calculadora {
                         break;
                     case '-': resul = op1 - op2;
                         break;
+                    case '^': 
+                    int opUno = 0, opDos = 0;
+                    try {
+                        opUno = (int) op1;
+                        opDos = (int) op2;
+                    } catch (Exception e) {
+                        System.out.println("Ingresa un integer");
+                    } resul = opUno ^ opDos;
+                        break;
                     case '*': resul = op1 * op2;
                         break;
                     case '/': if (op2 == 0) // Si el denominador es 0 se lanza una excepción
