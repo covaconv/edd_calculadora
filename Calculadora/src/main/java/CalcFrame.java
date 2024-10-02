@@ -4,8 +4,13 @@
  */
  
 /**
- *
- * 
+ * @author Ceci 
+ * @author Fernando Barrios
+ * @author Aniel 
+ * @author Rodrigo Flores 
+ * @version 0.1
+ * CalcFrame
+ * Vista y Controlador de la calculadora
  */
 public class CalcFrame extends javax.swing.JFrame {
 
