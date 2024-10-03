@@ -129,7 +129,7 @@ public class Calculadora {
     
     // Método auxiliar que regresa true si la cadena recibida no es un operador
     private boolean noEsOperador(String dato){
-        return !dato.equals("+") && !dato.equals("-") && !dato.equals("*") && !dato.equals("/");
+        return !dato.equals("+") && !dato.equals("-") && !dato.equals("*") && !dato.equals("/") && !dato.equals("^");
     }
     
     /* Método auxiliar para el manejo de las prioridades de los operadores. Regresa 0,
@@ -171,6 +171,13 @@ public class Calculadora {
                     case '+': resul = op1 + op2;
                         break;
                     case '-': resul = op1 - op2;
+                        break;
+                    case '^': 
+                    try {
+                        resul = Math.pow(op1, op2);
+                    } catch (Exception e) {
+                        System.out.println("Número no válido");
+                    } 
                         break;
                     case '*': resul = op1 * op2;
                         break;
