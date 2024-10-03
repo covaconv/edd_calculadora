@@ -173,13 +173,10 @@ public class Calculadora {
                     case '-': resul = op1 - op2;
                         break;
                     case '^': 
-                    int opUno = 0, opDos = 0;
                     try {
-                        opUno = (int) op1;
-                        opDos = (int) op2;
-                        resul = Math.pow(opUno, opDos);
+                        resul = Math.pow(op1, op2);
                     } catch (Exception e) {
-                        System.out.println("Ingresa un integer");
+                        System.out.println("Número no válido");
                     } 
                         break;
                     case '*': resul = op1 * op2;
