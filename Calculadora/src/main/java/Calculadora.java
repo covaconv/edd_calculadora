@@ -145,6 +145,8 @@ public class Calculadora {
                 break;
             case '*':
             case '/': resultado = 2;
+                break;
+            case '^': resultado = 3;
         }
         return resultado;
     }
