@@ -154,7 +154,7 @@ public class CalcFrame extends javax.swing.JFrame {
             }
         });
 
-        mult.setText("x");
+        mult.setText("*");
         mult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multActionPerformed(evt);
@@ -315,97 +315,97 @@ public class CalcFrame extends javax.swing.JFrame {
 
     private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
         // TODO add your handling code here:
-        cad.append(uno.getText()+" ");
+        cad.append(uno.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_unoActionPerformed
 
     private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
         // TODO add your handling code here:
-        cad.append(dos.getText()+" ");
+        cad.append(dos.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_dosActionPerformed
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
-        cad.append(suma.getText()+" ");
+        cad.append(" " + suma.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_sumaActionPerformed
 
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
         // TODO add your handling code here:
-        cad.append(tres.getText()+" ");
+        cad.append(tres.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_tresActionPerformed
 
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
         // TODO add your handling code here:
-        cad.append(cuatro.getText()+" ");
+        cad.append(cuatro.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_cuatroActionPerformed
 
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
         // TODO add your handling code here:
-        cad.append(cinco.getText()+" ");
+        cad.append(cinco.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_cincoActionPerformed
 
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
         // TODO add your handling code here:
-        cad.append(seis.getText()+" ");
+        cad.append(seis.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_seisActionPerformed
 
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
         // TODO add your handling code here:
-        cad.append(siete.getText()+" ");
+        cad.append(siete.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_sieteActionPerformed
 
     private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
         // TODO add your handling code here:
-        cad.append(ocho.getText()+" ");
+        cad.append(ocho.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_ochoActionPerformed
 
     private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
         // TODO add your handling code here:
-        cad.append(nueve.getText()+" ");
+        cad.append(nueve.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_nueveActionPerformed
 
     private void parIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parIzqActionPerformed
         // TODO add your handling code here:
-        cad.append(parIzq.getText()+" ");
+        cad.append(parIzq.getText() + " ");
         display.setText(cad.toString());
     }//GEN-LAST:event_parIzqActionPerformed
 
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
         // TODO add your handling code here:
-        cad.append(cero.getText()+" ");
+        cad.append(cero.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_ceroActionPerformed
 
     private void parDerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parDerActionPerformed
         // TODO add your handling code here:
-        cad.append(parDer.getText()+" ");
+        cad.append(" " + parDer.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_parDerActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         // TODO add your handling code here:
-        cad.append(resta.getText()+" ");
+        cad.append(" " + resta.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_restaActionPerformed
 
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
         // TODO add your handling code here:
-        cad.append(mult.getText()+" ");
+        cad.append(" " + mult.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_multActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
         // TODO add your handling code here:
-        cad.append(div.getText()+" ");
+        cad.append(" " + div.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_divActionPerformed
 
@@ -423,13 +423,12 @@ public class CalcFrame extends javax.swing.JFrame {
 
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
         // TODO add your handling code here:
-        cad.append(potencia.getText() + " ");
+        cad.append(" " + potencia.getText() + " ");
         display.setText(cad.toString());
     }//GEN-LAST:event_potenciaActionPerformed
 
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
         // TODO add your handling code here:
-        cad.deleteCharAt(cad.length()-1);
         cad.append(punto.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_puntoActionPerformed
