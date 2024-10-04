@@ -3,7 +3,7 @@
  * 
  * Clase que implementa una pila genérica usando un arreglo genérico.
  * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
- * @version 1.1
+ * @version 0.1
  */
 public class PilaA <T> implements PilaADT <T>{
     private T colec[];

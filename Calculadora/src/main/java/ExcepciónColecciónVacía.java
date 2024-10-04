@@ -4,7 +4,7 @@
  * Se define una clase propia para el manejo de excepción en los casos que la 
  * colección o estructura de datos esté vacía.
  * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
- * @version 1.1
+ * @version 0.1
  */
 public class ExcepciónColecciónVacía extends RuntimeException{
 

@@ -1,7 +1,10 @@
 
 /**
- 
+ * PilaADT 
+ * 
  * Se define el comportamiento esperado de una pila a través de una interface.
+ * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
+ * @version 0.1
  */
 public interface PilaADT <T>{
     public T pop(); // Debe quitar el elemento que está en el tope y regresarlo.
