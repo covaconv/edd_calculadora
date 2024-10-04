@@ -1,17 +1,17 @@
-
-
-
-
 /** 
- 
+ * Pila
+ * 
  * Clase que implementa una pila genérica usando un arreglo genérico.
+ * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
+ * @version 1.1
  */
 public class PilaA <T> implements PilaADT <T>{
     private T colec[];
     private int tope;
     private final int MAX = 10;
 
-    /* Se construye un arreglo de objetos y se lo convierte explícitamente a tipo T.
+    /**
+     * Se construye un arreglo de objetos y se lo convierte explícitamente a tipo T.
      * Inicialmente la pila está vacía, lo que se indica con tope igual a -1.
      */
     public PilaA() {
@@ -19,18 +19,21 @@ public class PilaA <T> implements PilaADT <T>{
         tope = -1;
     }
     
-    /* Se construye un arreglo de objetos y se lo convierte explícitamente a tipo T.
-     * El espacio máximo reservado queda determinado por el parámetro max.
+    /**
+     * Se construye un arreglo de objetos y se lo convierte explícitamente a tipo T.
      * Inicialmente la pila está vacía, lo que se indica con tope igual a -1.
+     * @param max (<b>int</b>) El espacio máximo reservado.
      */
     public PilaA(int max) {
         colec = (T[]) (new Object[max]);
         tope = -1;
     }
     
-    /* Agrega el dato en el tope, redefiniendo el valor de éste. Si la pila está llena, 
+    /**
+     * Agrega el dato en el tope, redefiniendo el valor de éste. Si la pila está llena, 
      * se construye un arreglo de mayor capacidad y se copian los elementos de la pila 
      * a éste.
+     * @param dato (<b>T</b>) Elemento que se agrega a la pila.
      */
     public void push(T dato) {
         if (tope == colec.length - 1) 
@@ -39,8 +42,10 @@ public class PilaA <T> implements PilaADT <T>{
         colec[tope] = dato;
     }
 
-    /* Elimina y regresa el elemento que está en el tope de la pila, redefiniendo el valor 
+    /**
+     * Elimina y regresa el elemento que está en el tope de la pila, redefiniendo el valor 
      * del tope. Si la pila está vacía lanza una excepción.
+     * @return (<b>T</b>) Elemento que está en el tope de la pila.
      */
     public T pop() {
         if (isEmpty())
@@ -52,8 +57,10 @@ public class PilaA <T> implements PilaADT <T>{
         }
     }
     
-    /* Regresa el elemento que está en el tope.
+    /**
+     * Regresa el elemento que está en el tope.
      * Si la pila está vacía lanza una excepción.
+     * @return (<b>T</b>) Elemento que está en el tope de la pila.
      */
     public T peek() { 
         if (isEmpty())
@@ -62,12 +69,18 @@ public class PilaA <T> implements PilaADT <T>{
             return colec[tope];
     }
     
-    // Regresa true si la pila está vacía.
+    /**
+     * Revisa si la pila está vacía.
+     * @return <ul>
+     * <li><b>true:</b> si la pila está vacía.</li>
+     * <li><b>false.</b> si la pila <b>no</b> está vacía.</li>
+     */
     public boolean isEmpty() {
         return tope == -1;
     }
     
-    /* Método auxiliar que construye un arreglo de mayor tamaño y copia en él todos
+    /**
+     * Método auxiliar que construye un arreglo de mayor tamaño y copia en él todos
      * los elementos de la pila, asignando al arreglo colec la referencia del nuevo
      * arreglo.
      */
