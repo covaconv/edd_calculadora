@@ -4,8 +4,11 @@
  */
  
 /**
- *
+ * CalcFrame
  * 
+ * Gui de la calculadora. 
+ * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
+ * @version 1.1
  */
 public class CalcFrame extends javax.swing.JFrame {
 
@@ -313,126 +316,210 @@ public class CalcFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Agrega Action Event a boton Uno. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */
     private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
         // TODO add your handling code here:
         cad.append(uno.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_unoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Dos. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */
     private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
         // TODO add your handling code here:
         cad.append(dos.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_dosActionPerformed
 
+    /**
+     * Agrega Action Event a boton Suma. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         // TODO add your handling code here:
         cad.append(" " + suma.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_sumaActionPerformed
 
+    /**
+     * Agrega Action Event a boton tres. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
         // TODO add your handling code here:
         cad.append(tres.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_tresActionPerformed
 
+    /**
+     * Agrega Action Event a boton Cuatro. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
         // TODO add your handling code here:
         cad.append(cuatro.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_cuatroActionPerformed
 
+    /**
+     * Agrega Action Event a boton Cinco. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
         // TODO add your handling code here:
         cad.append(cinco.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_cincoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Seis. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
         // TODO add your handling code here:
         cad.append(seis.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_seisActionPerformed
 
+    /**
+     * Agrega Action Event a boton Siete. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
         // TODO add your handling code here:
         cad.append(siete.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_sieteActionPerformed
 
+    /**
+     * Agrega Action Event a boton Ocho. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
         // TODO add your handling code here:
         cad.append(ocho.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_ochoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Nueve. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
         // TODO add your handling code here:
         cad.append(nueve.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_nueveActionPerformed
 
+    /**
+     * Agrega Action Event a boton Parétesis Izquierdo. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void parIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parIzqActionPerformed
         // TODO add your handling code here:
         cad.append(parIzq.getText() + " ");
         display.setText(cad.toString());
     }//GEN-LAST:event_parIzqActionPerformed
 
+    /**
+     * Agrega Action Event a boton Cero. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
         // TODO add your handling code here:
         cad.append(cero.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_ceroActionPerformed
 
+    /**
+     * Agrega Action Event a boton Paréntesis Derecho. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void parDerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parDerActionPerformed
         // TODO add your handling code here:
         cad.append(" " + parDer.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_parDerActionPerformed
 
+    /**
+     * Agrega Action Event a boton Resta. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         // TODO add your handling code here:
         cad.append(" " + resta.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_restaActionPerformed
 
+    /**
+     * Agrega Action Event a boton Multiplicación. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
         // TODO add your handling code here:
         cad.append(" " + mult.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_multActionPerformed
 
+    /**
+     * Agrega Action Event a boton División. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
         // TODO add your handling code here:
         cad.append(" " + div.getText()+" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_divActionPerformed
 
+    /**
+     * Agrega Action Event a boton Borrar Todo. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void borrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarTodoActionPerformed
         // TODO add your handling code here:
         cad.delete(0, cad.length());
         display.setText(cad.toString());
     }//GEN-LAST:event_borrarTodoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Borrar Uno. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void borrarUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarUnoActionPerformed
         // TODO add your handling code here:
         cad.deleteCharAt(cad.length()-1);
         display.setText(cad.toString());
     }//GEN-LAST:event_borrarUnoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Potencia. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
         // TODO add your handling code here:
         cad.append(" " + potencia.getText() + " ");
         display.setText(cad.toString());
     }//GEN-LAST:event_potenciaActionPerformed
 
+    /**
+     * Agrega Action Event a boton Punto. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
         // TODO add your handling code here:
         cad.append(punto.getText());
         display.setText(cad.toString());
     }//GEN-LAST:event_puntoActionPerformed
 
+    /**
+     * Agrega Action Event a boton Igual. Lo escribe en la pantalla.
+     * @param evt (<b>ActionEvent</b>) Evento realizado.
+     */    
     private void igualActionPerformed(java.awt.event.ActionEvent evt){
         Calculadora calcu = new Calculadora(cad.toString());
         boolean check;
@@ -450,6 +537,7 @@ public class CalcFrame extends javax.swing.JFrame {
 
     }
     /**
+     * main
      * @param args the command line arguments
      */
     public static void main(String args[]) {
