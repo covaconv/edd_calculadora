@@ -7,7 +7,7 @@
  * <p>La clase representa de manera muy simplificada una calculadora que puede convertir
  * una expresión dada en notación prefija a notación postfija y, posteriormente, 
  * evaluarla. Se usan las pilas como estructuras de datos auxiliares a la solución
- * del problema.</p></br>
+ * del problema.</p><br>
  * <p>La calculadora sólo tiene 2 atributos: uno para almacenar la expresión original
  * y el segundo para almacenar el resultado, en caso de que la expresión pueda evaluarse.</p>
  */
@@ -66,7 +66,7 @@ public class Calculadora {
     /**
      * <p>Método auxiliar que revisa si la expresión dada en notación infija tiene los 
      * paréntesis bien balanceados. Es decir, si el número de paréntesis izquierdos 
-     * concuerda con el número de paréntesis derechos.</p></br>
+     * concuerda con el número de paréntesis derechos.</p><br>
      * <p>Utiliza un objeto tipo PilaE para almacenar los paréntesis izquierdos temporalmente.</p>
      * @return <ul>
      * <li><b>true:</b> si los paréntesis están balanceados.</li>
@@ -168,7 +168,7 @@ public class Calculadora {
     /**
      * <p>Método auxiliar para el manejo de las prioridades de los operadores.</p>
      * @param dato (<b>String</b>) operador. 
-     * @return (<b>int</b>) <p>Prioridad del operador para ser aplicado primero.</br>Regresa 0,
+     * @return (<b>int</b>) <p>Prioridad del operador para ser aplicado primero.<br>Regresa 0,
      * el valor más pequeño, cuando el dato dado es un "(". De esta manera
      * el "(" sólo se saca de la pila cuando se encuentre un ")"</p>
      */
