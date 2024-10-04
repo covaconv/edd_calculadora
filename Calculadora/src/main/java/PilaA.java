@@ -74,6 +74,7 @@ public class PilaA <T> implements PilaADT <T>{
      * @return <ul>
      * <li><b>true:</b> si la pila está vacía.</li>
      * <li><b>false.</b> si la pila <b>no</b> está vacía.</li>
+     * </ul>
      */
     public boolean isEmpty() {
         return tope == -1;
