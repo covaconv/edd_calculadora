@@ -1,13 +1,15 @@
-
-
 /**
- 
- * La clase representa de manera muy simplificada una calculadora que puede convertir
+ * Clase Calculadora 
+ * 
+ * @author Ceci Leon, Aniel Orihuela, Rodrigo Flores, Fernando Barrios
+ * @version 1.1
+ * 
+ * <p>La clase representa de manera muy simplificada una calculadora que puede convertir
  * una expresión dada en notación prefija a notación postfija y, posteriormente, 
  * evaluarla. Se usan las pilas como estructuras de datos auxiliares a la solución
- * del problema.
- * La calculadora sólo tiene 2 atributos: uno para almacenar la expresión original
- * y el segundo para almacenar el resultado, en caso de que la expresión pueda evaluarse.
+ * del problema.</p></br>
+ * <p>La calculadora sólo tiene 2 atributos: uno para almacenar la expresión original
+ * y el segundo para almacenar el resultado, en caso de que la expresión pueda evaluarse.</p>
  */
 public class Calculadora {
     private String entrada;  // Es una expresión dada en notación infija
@@ -16,24 +18,38 @@ public class Calculadora {
     public Calculadora() {
     }
     
-    // Se construye un objeto tipo calculadora y se le asigna un valor a la expresión infija
+    /**
+     * Se construye un objeto tipo calculadora y se le asigna un valor a la expresión infija
+     * @param entrada expresion infija tipo String
+     */
     public Calculadora(String entrada) {
         this.entrada = entrada;
     }
 
-    // Método para cambiar el valor de la expresión que se evaluará por medio de la calculadora
+    /**
+     * Método para cambiar el valor de la expresión que se evaluará por medio de la calculadora
+     * @param entrada expresion infija tipo String 
+     */
     public void setEntrada(String entrada) {
         this.entrada = entrada;
     }
     
-    // Método para obtener el resultado
+    /**
+     * Método para devolver el valor guardado en el atributo resultado 
+     * @return (<b>double</b>) Resultado de operación.
+     */
     public double getResultado(){
         return resultado;
     }
     
-    /* Método que tiene el control de las operaciones que lleva a cabo la calculadora
-     * para evaluar la expresión. Si la expresión se puede evaluar deja el resultado en
-     * el atributo resultado y regresa true. En caso contrario regresa false.
+    /**
+     * <p>Método que tiene el control de las operaciones que lleva a cabo la calculadora
+     * para evaluar la expresión.</p>
+     * 
+     * @return <ul>
+     * <li><b>true:</b> si la expresion se puede evaluar y deja en el resultado en el atributo resultado.</li>
+     * <li><b>false:</b> si la expresion no se logró evaluar.</li>
+     * </ul>
      */
     public boolean calcula(){
         boolean resp;
@@ -47,10 +63,15 @@ public class Calculadora {
         return resp;
     }
     
-    /* Método auxiliar que revisa si la expresión dada en notación infija tiene los 
+    /**
+     * <p>Método auxiliar que revisa si la expresión dada en notación infija tiene los 
      * paréntesis bien balanceados. Es decir, si el número de paréntesis izquierdos 
-     * concuerda con el número de paréntesis derechos.
-     * Utiliza un objeto tipo PilaE para almacenar los paréntesis izquierdos temporalmente.
+     * concuerda con el número de paréntesis derechos.</p></br>
+     * <p>Utiliza un objeto tipo PilaE para almacenar los paréntesis izquierdos temporalmente.</p>
+     * @return <ul>
+     * <li><b>true:</b> si los paréntesis están balanceados.</li>
+     * <li><b>false:</b> si los paréntesis <b>no</b> están balanceados.</li>
+     * </ul>
      */
     private boolean revisa(){
         PilaADT<Character> pila = new PilaA<>();
@@ -74,18 +95,23 @@ public class Calculadora {
         return resp && pila.isEmpty();
     }
     
-    /* Método auxiliar que permite separar -por medio del método split() de la clase String
+    /**
+     * <p>Método auxiliar que permite separar -por medio del método split() de la clase String
      * de Java- la cadena dada y guarda cada uno de sus elementos (operadores, operandos 
-     * y paréntesis) en un arreglo de cadenas.
+     * y paréntesis) en un arreglo de cadenas.</p>
+     * @return (<b>String[]</b>) Arreglo de caracteres de la operación (operadores, operandos y paréntesis). 
      */ 
     private String[] obtieneTokens(){
       return entrada.split(" ");
     }
     
-    /* Método auxiliar que recibe un arreglo de cadenas que representa a una cadena en
+    /**
+     * <p>Método auxiliar que recibe un arreglo de cadenas que representa a una cadena en
      * notación infija y regresa otro arreglo con la misma expresión pero ahora en
      * notación postfija. Usa un objeto tipo PilaE para almacenar temporalemente algunos
-     * elementos de la expresión. 
+     * elementos de la expresión.</p>
+     * @param elementos (<b>String[]</b>) Arreglo de tokens de la expresión.
+     * @return (<b>String[]</b>) Arreglo de tokens de la expresión postfija.
      */        
     private String[] conviertePostfija(String elementos[]){
         String postfija[] = new String[elementos.length];
@@ -127,14 +153,24 @@ public class Calculadora {
         return postfija;
     }
     
-    // Método auxiliar que regresa true si la cadena recibida no es un operador
+    /**
+     * <p>Método auxiliar para verificar si el token recibido no es un operador.</p>
+     * @param dato (<b>String:</b>) token a validar.
+     * @return <ul>
+     * <il><b>true:</b> Si <i>dato</i> no es un operador.</il>
+     * <il><b>false:</b> Si <i>dato</i> es un operadoor.</il>
+     * </ul>
+     */
     private boolean noEsOperador(String dato){
         return !dato.equals("+") && !dato.equals("-") && !dato.equals("*") && !dato.equals("/") && !dato.equals("^");
     }
     
-    /* Método auxiliar para el manejo de las prioridades de los operadores. Regresa 0,
+    /**
+     * <p>Método auxiliar para el manejo de las prioridades de los operadores.</p>
+     * @param dato (<b>String</b>) operador. 
+     * @return (<b>int</b>) <p>Prioridad del operador para ser aplicado primero.</br>Regresa 0,
      * el valor más pequeño, cuando el dato dado es un "(". De esta manera
-     * el "(" sólo se saca de la pila cuando se encuentre un ")".
+     * el "(" sólo se saca de la pila cuando se encuentre un ")"</p>
      */
     private int prioridad(String dato){
         int resultado = 0; // En caso de que el dato sea un paréntesis izquierdo
@@ -149,10 +185,12 @@ public class Calculadora {
         return resultado;
     }
     
-    /* Método auxiliar para evaluar una expresión dada en notación postfija.
+    /**
+     * <p>Método auxiliar para evaluar una expresión dada en notación postfija.
      * Usa un objeto tipo PilaE para almacenar temporalmente los operandos y los 
-     * resultados parciales que se van obteniendo. 
-     * Regresa un dato tipo double.
+     * resultados parciales que se van obteniendo. </p>
+     * @param postfija (<b>String[]</b>) cadena de tokens de la expresión postfija.
+     * @return <b>double</b> Resultado de la expresión. 
      */
     private double evalúa(String postfija[]){
         PilaADT<Double> pila = new PilaA<>();
@@ -190,5 +228,5 @@ public class Calculadora {
             i++;
         }
           return pila.pop();            
-        }    
+    }    
 }
