@@ -11,7 +11,13 @@
  * @version 1.1
  */
 public class Calculadora {
+    /**
+     * Expresión a evaluar.
+     */
     private String entrada;  // Es una expresión dada en notación infija
+    /**
+     * Resultado de la expresión.
+     */
     private double resultado;
 
     /**
@@ -160,8 +166,8 @@ public class Calculadora {
      * Método auxiliar para verificar si el token recibido no es un operador.
      * @param dato (<b>String:</b>) token a validar.
      * @return <ul>
-     * <il><b>true:</b> Si <i>dato</i> no es un operador.</il>
-     * <il><b>false:</b> Si <i>dato</i> es un operadoor.</il>
+     * <li><b>true:</b> Si <i>dato</i> no es un operador.</li>
+     * <li><b>false:</b> Si <i>dato</i> es un operadoor.</li>
      * </ul>
      */
     private boolean noEsOperador(String dato){
