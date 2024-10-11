@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"CalcFrame"},{"p":"<Unnamed>","l":"Calculadora"},{"p":"<Unnamed>","l":"ExcepciónColecciónVacía"},{"p":"<Unnamed>","l":"PilaA"},{"p":"<Unnamed>","l":"PilaADT"}];updateSearchResults();
