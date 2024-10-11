@@ -435,7 +435,7 @@ public class CalcFrame extends javax.swing.JFrame {
 
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
         // TODO add your handling code here:
-        cad.append(" " + potencia.getText() + " ");
+        cad.append(" ").append(potencia.getText()).append(" ");
         display.setText(cad.toString());
     }//GEN-LAST:event_potenciaActionPerformed
 
@@ -447,9 +447,8 @@ public class CalcFrame extends javax.swing.JFrame {
 
     private void raizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizActionPerformed
         // TODO add your handling code here:
-        cad.append(raiz.getText());
+        cad.append(" √ ( ");
         display.setText(cad.toString());
-        parIzqActionPerformed(evt);
     }//GEN-LAST:event_raizActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
