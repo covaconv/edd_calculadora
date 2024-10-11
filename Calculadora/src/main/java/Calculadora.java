@@ -60,6 +60,7 @@ public class Calculadora {
      * <li><b>false:</b> si la expresion no se logró evaluar.</li>
      * </ul>
      */
+    
     public boolean calcula(){
         boolean resp;
        
@@ -122,43 +123,56 @@ public class Calculadora {
      * @param elementos (<b>String[]</b>) Arreglo de tokens de la expresión.
      * @return (<b>String[]</b>) Arreglo de tokens de la expresión postfija.
      */        
-    private String[] conviertePostfija(String elementos[]){
+    private String[] conviertePostfija(String elementos[]) {
         String postfija[] = new String[elementos.length];
-        PilaADT <String> pila = new PilaA<>();
+        PilaADT<String> pila = new PilaA<>();
         int e, p, n;
-        
+    
         e = 0;
         p = 0;
         n = elementos.length;
-        while (e < n){
-            if (elementos[e].equals("(")) // Es paréntesis izquierdo
-                pila.push(elementos[e]);
-            else
-                if (elementos[e].equals(")")){ // Es paréntesis derecho
-                    while (!pila.peek().equals("(")){
-                        postfija[p] = pila.pop();
-                        p++;
-                    }
-                    pila.pop();
+        while (e < n) {
+            if (elementos[e].equals("(")) {
+                pila.push(elementos[e]);  // Apilar el paréntesis izquierdo
+            } else if (elementos[e].equals(")")) {
+                // Manejar el caso del paréntesis derecho
+                while (!pila.isEmpty() && !pila.peek().equals("(")) {
+                    postfija[p] = pila.pop();
+                    p++;
                 }
-                else
-                    if (noEsOperador(elementos[e])){ // Es un operando
-                        postfija[p] = elementos[e];
-                        p++;
-                    }
-                    else {  // Es un operador
-                        while (!pila.isEmpty() && prioridad(pila.peek()) > prioridad(elementos[e])){
-                            postfija[p] = pila.pop();
-                            p++;
-                        }
-                        pila.push(elementos[e]);
-                    }
-            e++;          
-       }
-        while (!pila.isEmpty()){
+                if (!pila.isEmpty()) {
+                    pila.pop(); // Elimina el paréntesis izquierdo
+                }
+            } else if (elementos[e].equals("√")) {
+                // Manejar √ junto con un posible paréntesis
+                if (elementos[e + 1].equals("(")) { // Si el siguiente es un paréntesis
+                    pila.push("√"); // Apilar √ y tratar la expresión dentro de los paréntesis
+                } else {
+                    // Si no hay paréntesis, manejarlo como operación unaria simple
+                    postfija[p] = elementos[++e]; // Toma el siguiente operando
+                    p++;
+                    postfija[p] = "√"; // Luego colocamos el operador de raíz cuadrada
+                    p++;
+                }
+            } else if (noEsOperador(elementos[e])) { // Es un operando
+                postfija[p] = elementos[e];
+                p++;
+            } else { // Es un operador (+, -, *, /, ^)
+                while (!pila.isEmpty() && prioridad(pila.peek()) >= prioridad(elementos[e])) {
+                    postfija[p] = pila.pop();
+                    p++;
+                }
+                pila.push(elementos[e]);
+            }
+            e++;
+        }
+    
+        // Sacar todos los operadores restantes de la pila
+        while (!pila.isEmpty()) {
             postfija[p] = pila.pop();
             p++;
         }
+    
         return postfija;
     }
     
@@ -171,7 +185,7 @@ public class Calculadora {
      * </ul>
      */
     private boolean noEsOperador(String dato){
-        return !dato.equals("+") && !dato.equals("-") && !dato.equals("*") && !dato.equals("/") && !dato.equals("^");
+        return !dato.equals("+") && !dato.equals("-") && !dato.equals("*") && !dato.equals("/") && !dato.equals("^") && !dato.equals("√");
     }
     
     /**
@@ -191,7 +205,10 @@ public class Calculadora {
             case '*':
             case '/': resultado = 2;
                 break;
+            case '√':
             case '^': resultado = 3;
+                break;
+            case '(': resultado = 0;
         }
         return resultado;
     }
@@ -203,39 +220,45 @@ public class Calculadora {
      * @param postfija (<b>String[]</b>) cadena de tokens de la expresión postfija.
      * @return <b>double</b> Resultado de la expresión. 
      */
-    private double evalúa(String postfija[]){
+    private double evalúa(String postfija[]) {
         PilaADT<Double> pila = new PilaA<>();
         double resul, op1, op2;
-        int i;
-        
+        int i = 0;
+    
         resul = 0;
-        i = 0;
-        while (i < postfija.length && postfija[i] != null){
-            if (noEsOperador(postfija[i])) // Es operando
-                pila.push(Double.valueOf(postfija[i]));
-            else { // Es operador
-                op2 = pila.pop();
-                op1 = pila.pop();
-                switch (postfija[i].charAt(0)){
-                    case '+': resul = op1 + op2;
-                        break;
-                    case '-': resul = op1 - op2;
-                        break;
-                    case '^': 
-                    try {
-                        resul = Math.pow(op1, op2);
-                    } catch (Exception e) {
-                        System.out.println("Número no válido");
-                    } 
-                        break;
-                    case '*': resul = op1 * op2;
-                        break;
-                    case '/': if (op2 == 0) // Si el denominador es 0 se lanza una excepción
-                                    throw new RuntimeException();
-                              resul = op1 / op2;
+        op1 = 0;
+        op2 = 0;
+        while (i < postfija.length && postfija[i] != null) {
+            if (!postfija[i].trim().isEmpty()) {
+                if (noEsOperador(postfija[i])) { // Si es un operando
+                    pila.push(Double.valueOf(postfija[i])); // Convertir a número
+                } else { // Es un operador
+                    if (postfija[i].equals("√")) { // Operación unaria (raíz cuadrada)
+                        op2 = pila.pop(); // Solo un operando para √
+                        resul = Math.sqrt(op2); // Aplica la raíz cuadrada
+                    } else { // Operaciones binarias
+                        op2 = pila.pop(); // Extrae el segundo operando
+                        op1 = pila.pop(); // Extrae el primer operando
+    
+                        switch (postfija[i].charAt(0)) {
+                            case '+': resul = op1 + op2;
+                                break;
+                            case '-': resul = op1 - op2;
+                                break;
+                            case '*': resul = op1 * op2;
+                                break;
+                            case '/': 
+                                if (op2 != 0) {
+                                    resul = op1 / op2;
+                                }
+                                break;
+                            case '^': resul = Math.pow(op1, op2);
+                                break;
+                        }
+                    }
+                    pila.push(resul); // Empuja el resultado a la pila
                 }
-                pila.push(resul);                        
-                }
+            }
             i++;
         }
           return pila.pop();            
