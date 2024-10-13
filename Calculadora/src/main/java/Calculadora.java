@@ -207,7 +207,6 @@ public class Calculadora {
                 break;
             case '√':
             case '^': resultado = 3;
-                break;
         }
         return resultado;
     }
